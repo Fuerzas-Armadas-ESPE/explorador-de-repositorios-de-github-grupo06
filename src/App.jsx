@@ -35,6 +35,11 @@ function App() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Mi Explorador de Repositorios
           </Typography>
+          {username && (
+            <Typography variant="body2" sx={{ fontSize: '1.2rem', marginRight: '20px' }}>
+              Usuario: {username}
+            </Typography>
+          )}
         </Toolbar>
       </AppBar>
       <Container maxWidth="sm" sx={{ marginTop: "20px" }}>
