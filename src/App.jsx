@@ -10,8 +10,6 @@ import {
 import RepoList from "./components/RepoList";
 import imagelogo from "./img/logo.png";
 
-
-
 function App() {
   const [username, setUsername] = useState("");
   const [showRepoList, setShowRepoList] = useState(false);
@@ -35,6 +33,11 @@ function App() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Mi Explorador de Repositorios
           </Typography>
+          {username && (
+            <Typography variant="body2" sx={{ fontSize: '1.2rem', marginRight: '20px' }}>
+              Usuario: {username}
+            </Typography>
+          )}
         </Toolbar>
       </AppBar>
       <Container maxWidth="sm" sx={{ marginTop: "20px" }}>
